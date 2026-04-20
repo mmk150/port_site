@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260">
+  <title>m=16 n=2112 k=7168</title>
+  <desc>Matrix A (M by K) in red and matrix B (N by K) in blue, drawn at a single proportional scale. M is shown at a 3px minimum so it's visible; at true scale it would be sub-pixel.</desc>
+
+  <text x="300" y="30" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="500" fill="#3d3d3a">m=16 · n=2112 · k=7168</text>
+
+  <rect x="50" y="60" width="500" height="3" fill="#D58F8F" stroke="#A32D2D" stroke-width="0.5"/>
+  <rect x="50" y="83" width="500" height="147" fill="#7FAAD0" stroke="#185FA5" stroke-width="0.5"/>
+
+  <text x="560" y="62" dominant-baseline="central" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#A32D2D">A</text>
+  <text x="560" y="156" dominant-baseline="central" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#185FA5">B</text>
+</svg>

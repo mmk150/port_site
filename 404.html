@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var location = window.location;
+        var appRouteRoots = ["projects", "about", "contact", "blog"];
+        var segments = location.pathname.split("/").filter(Boolean);
+        var firstSegment = segments[0];
+        var isRootHostedRoute = appRouteRoots.indexOf(firstSegment) !== -1;
+        var segmentsToKeep = !isRootHostedRoute && segments.length > 1 ? 1 : 0;
+        var baseSegments = segments.slice(0, segmentsToKeep);
+        var routeSegments = segments.slice(segmentsToKeep);
+        var basePath = "/" + baseSegments.join("/");
+
+        if (basePath !== "/") {
+          basePath += "/";
+        }
+
+        var routePath = routeSegments.join("/").replace(/&/g, "~and~");
+        var query = location.search
+          ? "&" + location.search.slice(1).replace(/&/g, "~and~")
+          : "";
+
+        location.replace(
+          location.protocol +
+            "//" +
+            location.host +
+            basePath +
+            "?/" +
+            routePath +
+            query +
+            location.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
